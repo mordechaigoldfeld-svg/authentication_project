@@ -11,3 +11,6 @@ export async function comparePassword(paswword,hashPassword) {
     return bcrypt.compare(paswword,hashPassword)
     
 }
+
+
+// console.log(await hashPassword('12345'));
