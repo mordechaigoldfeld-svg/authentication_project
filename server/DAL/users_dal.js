@@ -34,3 +34,15 @@ export async function findByEmail(email) {
 
 
 // console.log(await findByEmail('test2@gmail.com'));
+
+
+
+export async function getAll() {
+
+    const allUsers = users.find().toArray()
+
+    return allUsers
+}
+
+
+// console.log(await getAll());
