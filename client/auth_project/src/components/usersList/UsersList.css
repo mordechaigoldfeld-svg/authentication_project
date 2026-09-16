@@ -1,0 +1,29 @@
+.users-grid{
+
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    background-color: aqua;
+
+}
+
+
+
+
+.li{
+    display:flex;
+
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 3px solid #e2e8f0;
+    gap: 10px;
+}
+
+.nav{
+
+    background-color: lightgreen;
+    overflow: auto;
+}
+
+.over{
+    overflow: auto;
+}
