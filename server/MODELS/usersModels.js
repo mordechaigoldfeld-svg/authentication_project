@@ -1,6 +1,6 @@
-export function createUserModel({email,passwordHash,name}){
+export function createUserModel({ email, passwordHash, name }) {
 
-    return{
+    return {
         email,
         passwordHash,
         name,
@@ -8,3 +8,15 @@ export function createUserModel({email,passwordHash,name}){
     }
 
 }
+
+
+export function returnAllWithoutPass(users) {
+
+    const newUsers = users.map((u) => {
+
+        u = { id: u._id.toString(), username: u.name, email: u.email }
+        return u
+    })
+    return newUsers
+}
+

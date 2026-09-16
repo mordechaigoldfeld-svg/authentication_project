@@ -1,4 +1,5 @@
 import { getAll } from "../DAL/users_dal.js";
+import { returnAllWithoutPass } from "../MODELS/usersModels.js";
 import { createUserService, loginService } from "../SERVICE/usersService.js";
 
 
@@ -49,7 +50,8 @@ export async function getAllControler(req,res) {
 
     try {
         const users = await getAll()
-        res.status(200).json(users)
+        const cleanedUsers = returnAllWithoutPass(users)
+        res.status(200).json(cleanedUsers)
 
     } catch (error) {
         if (error.message) {
